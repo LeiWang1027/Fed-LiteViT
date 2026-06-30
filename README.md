@@ -2,17 +2,17 @@
 
 Official implementation for the manuscript:
 
-**Fed-LiteViT: A Lightweight Vision Transformer for Federated Learning under Non-IID Data**
+**Fed-LiteViT: A Robust Lightweight Vision Transformer Backbone for Non-IID Edge Federated Visual Learning**
 
-Fed-LiteViT studies how client-side neural architecture affects representation stability and aggregation behavior in federated learning systems. The core model embeds heterogeneity adaptation into a lightweight Vision Transformer backbone through MICLA (Mamba-Inspired Cascaded Linear Attention), a capacity-asymmetric dual-branch mixer designed for aggregation-compatible client learning.
+Fed-LiteViT is a lightweight Vision Transformer backbone for robust, low-cost edge federated visual learning under non-IID uncertainty. The core model embeds heterogeneity adaptation into the client architecture through MICLA, a capacity-asymmetric dual-branch mixer that stabilizes client updates while preserving visual representation capacity. This repository provides the code used for the Applied Soft Computing submission, including federated training, centralized sanity checks, model-complexity profiling, and diagnostic analyses.
 
 ## Highlights
 
-- Lightweight ViT backbone for non-IID federated visual learning.
-- MICLA block with an expressive attention branch and a lightweight gating branch.
-- Stage-wise local-global-local attention schedule for local detail modeling and periodic global interaction.
+- Robust lightweight ViT backbone for non-IID edge federated visual learning.
+- MICLA uses capacity-asymmetric modulation to stabilize client updates.
+- Stage-wise local-global-local attention balances local detail and global calibration.
 - Support for matched FL protocols including FedAvg, FedProx, and FedBN.
-- Diagnostic utilities for model complexity, branch divergence, CKA similarity, and paired ablation analysis.
+- Diagnostic utilities cover model complexity, branch divergence, CKA, and ablations.
 
 ## Repository Layout
 
@@ -214,4 +214,9 @@ Recommended metadata to record for each experiment:
 
 ## Citation
 
-If you use this repository, please cite the paper after publication.
+If you use this repository, please cite the paper after publication:
+
+```text
+Fed-LiteViT: A Robust Lightweight Vision Transformer Backbone for Non-IID Edge Federated Visual Learning.
+Submitted to Applied Soft Computing.
+```
